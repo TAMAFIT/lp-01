@@ -204,7 +204,7 @@
         }
         .hero-img {
             position: absolute; top: 0; right: 0; width: 50%; height: 100%;
-            background: url('hero.jpg') no-repeat center center / cover;
+            background: url('hero.webp') no-repeat center center / cover;
             clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); z-index: 1;
         }
         .hero-content { position: relative; z-index: 10; width: 60%; padding-left: 5%; }
