@@ -24,20 +24,77 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // --- ギャラリーのドラッグ用プログラム ---
+            // --- ギャラリーの動的読み込み ---
             const slider = document.getElementById('drag-slider');
+            const defaultCaptions = {
+                1: "丁寧なカウンセリングからスタート",
+                2: "プロが正しい姿勢を優しくサポート",
+                3: "あなたのペースで、楽しく体を動かす",
+                4: "手ぶらで通える充実の無料レンタル"
+            };
+
+            async function loadDynamicGallery() {
+                let imgIndex = 1;
+                let hasMoreImages = true;
+
+                while (hasMoreImages && imgIndex <= 50) { // 安全のため最大50枚まで
+                    const imgUrl = `gallery${imgIndex}.webp`;
+                    const exists = await checkImageExists(imgUrl);
+
+                    if (exists) {
+                        const itemDiv = document.createElement('div');
+                        itemDiv.className = 'gallery-item';
+                        
+                        const img = document.createElement('img');
+                        img.src = imgUrl;
+                        img.alt = defaultCaptions[imgIndex] || `ギャラリー画像 ${imgIndex}`;
+                        img.loading = 'lazy';
+                        img.addEventListener('dragstart', (e) => e.preventDefault());
+                        
+                        const captionDiv = document.createElement('div');
+                        captionDiv.className = 'gallery-caption';
+                        captionDiv.textContent = defaultCaptions[imgIndex] || "";
+                        
+                        itemDiv.appendChild(img);
+                        if (defaultCaptions[imgIndex]) {
+                            itemDiv.appendChild(captionDiv);
+                        }
+                        
+                        slider.appendChild(itemDiv);
+                        imgIndex++;
+                    } else {
+                        hasMoreImages = false;
+                    }
+                }
+            }
+
+            function checkImageExists(url) {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.onload = () => resolve(true);
+                    img.onerror = () => resolve(false);
+                    img.src = url;
+                });
+            }
+
+            loadDynamicGallery();
+
+            // --- ギャラリーのドラッグ用プログラム ---
             let isDown = false; let startX; let scrollLeft;
             slider.addEventListener('mousedown', (e) => { isDown = true; slider.classList.add('active'); slider.style.scrollSnapType = 'none'; startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft; });
             slider.addEventListener('mouseleave', () => { if (!isDown) return; isDown = false; slider.classList.remove('active'); slider.style.scrollSnapType = 'x mandatory'; });
             document.addEventListener('mouseup', () => { if (!isDown) return; isDown = false; slider.classList.remove('active'); slider.style.scrollSnapType = 'x mandatory'; });
             slider.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - slider.offsetLeft; const walk = (x - startX) * 2; slider.scrollLeft = scrollLeft - walk; });
-            const images = slider.querySelectorAll('img');
-            const links = slider.querySelectorAll('a');
+            
             let isDragging = false;
             slider.addEventListener('mousemove', () => { if(isDown) isDragging = true; });
             slider.addEventListener('mouseup', () => { setTimeout(() => isDragging = false, 50); });
-            links.forEach(link => { link.addEventListener('click', (e) => { if(isDragging) e.preventDefault(); }); });
-            images.forEach(img => { img.addEventListener('dragstart', (e) => e.preventDefault()); });
+            // 動的に追加される要素へのイベント委譲は不要だが、リンクがある場合はSlider全体で調整
+            slider.addEventListener('click', (e) => {
+                if(isDragging && e.target.closest('a')) {
+                    e.preventDefault();
+                }
+            });
 
             // --- FAQ（アコーディオン）の開閉プログラム ---
             const faqItems = document.querySelectorAll('.faq-item');
