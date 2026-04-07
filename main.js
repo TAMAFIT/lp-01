@@ -26,44 +26,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // --- ギャラリーの動的読み込み ---
             const slider = document.getElementById('drag-slider');
-            const defaultCaptions = {
-                1: "丁寧なカウンセリングからスタート",
-                2: "プロが正しい姿勢を優しくサポート",
-                3: "あなたのペースで、楽しく体を動かす",
-                4: "手ぶらで通える充実の無料レンタル"
-            };
+            const galleryData = [
+                { url: "images/大林1.webp" },
+                { url: "images/玉井1.webp" },
+                { url: "images/大林2.webp" },
+                { url: "images/玉井2.webp" },
+                { url: "images/大林3.webp" },
+                { url: "images/玉井3.webp" },
+                { url: "images/大林4.webp" },
+                { url: "images/玉井4.webp" }
+            ];
 
             async function loadDynamicGallery() {
-                let imgIndex = 1;
-                let hasMoreImages = true;
-
-                while (hasMoreImages && imgIndex <= 50) { // 安全のため最大50枚まで
-                    const imgUrl = `gallery${imgIndex}.webp`;
-                    const exists = await checkImageExists(imgUrl);
-
+                for (let data of galleryData) {
+                    const exists = await checkImageExists(data.url);
                     if (exists) {
                         const itemDiv = document.createElement('div');
                         itemDiv.className = 'gallery-item';
                         
                         const img = document.createElement('img');
-                        img.src = imgUrl;
-                        img.alt = defaultCaptions[imgIndex] || `ギャラリー画像 ${imgIndex}`;
+                        img.src = data.url;
+                        img.alt = 'ギャラリー画像';
                         img.loading = 'lazy';
                         img.addEventListener('dragstart', (e) => e.preventDefault());
                         
-                        const captionDiv = document.createElement('div');
-                        captionDiv.className = 'gallery-caption';
-                        captionDiv.textContent = defaultCaptions[imgIndex] || "";
-                        
                         itemDiv.appendChild(img);
-                        if (defaultCaptions[imgIndex]) {
-                            itemDiv.appendChild(captionDiv);
-                        }
                         
                         slider.appendChild(itemDiv);
-                        imgIndex++;
-                    } else {
-                        hasMoreImages = false;
                     }
                 }
             }
