@@ -137,6 +137,8 @@ img {
     width: auto;
     margin-right: 12px;
     object-fit: contain;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .logo-text {
