@@ -98,12 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const chatWindow = document.getElementById('chat-window');
             const chatClose = document.getElementById('chat-close');
             
-            chatButton.addEventListener('click', () => { 
-                chatWindow.classList.toggle('active'); 
-            });
-            chatClose.addEventListener('click', () => { 
-                chatWindow.classList.remove('active'); 
-            });
+            if (chatButton && chatClose) {
+                chatButton.addEventListener('click', () => { 
+                    chatWindow.classList.toggle('active'); 
+                });
+                chatClose.addEventListener('click', () => { 
+                    chatWindow.classList.remove('active'); 
+                });
+            }
 
             // ▼ 教えていただいた最新のGAS URLを設定！ ▼
             const gasUrl = "https://script.google.com/macros/s/AKfycby6THg5PeEHYWWwxFV9VvY7kJ3MAMwoEuaJNs_EK_VZWv9alxqsi25RxDQ2wikkI1-H/exec";
