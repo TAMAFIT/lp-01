@@ -552,32 +552,42 @@ img {
     object-fit: cover;
     background-position: center;
     opacity: 0;
-    animation: sliderFade 16s infinite;
+    animation: sliderFade 60s infinite;
 }
 
 .hero-slide.slide1 { animation-delay: 0s; }
 .hero-slide.slide2 { animation-delay: 4s; }
 .hero-slide.slide3 { animation-delay: 8s; }
 .hero-slide.slide4 { animation-delay: 12s; }
+.hero-slide.slide5 { animation-delay: 16s; }
+.hero-slide.slide6 { animation-delay: 20s; }
+.hero-slide.slide7 { animation-delay: 24s; }
+.hero-slide.slide8 { animation-delay: 28s; }
+.hero-slide.slide9 { animation-delay: 32s; }
+.hero-slide.slide10 { animation-delay: 36s; }
+.hero-slide.slide11 { animation-delay: 40s; }
+.hero-slide.slide12 { animation-delay: 44s; }
+.hero-slide.slide13 { animation-delay: 48s; }
+.hero-slide.slide14 { animation-delay: 52s; }
+.hero-slide.slide15 { animation-delay: 56s; }
 
 @keyframes sliderFade {
-    0% { opacity: 0; }
-    8% { opacity: 1; }
-    25% { opacity: 1; }
-    33% { opacity: 0; }
-    100% { opacity: 0; }
+    0%       { opacity: 0; }
+    2%       { opacity: 1; }
+    6.66%    { opacity: 1; }
+    8.66%    { opacity: 0; }
+    100%     { opacity: 0; }
 }
 
 /* ① 文字の読みやすさを担保する静的なモヤ */
 .hero-static-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    /* 左〜左下が白、右上が透明になるグラデーション */
+    /* 読ませる文字の真後ろだけ薄く敷く（最大60%程度まで落とし、範囲も狭く） */
     background: linear-gradient(75deg, 
-        rgba(255,255,255,1) 0%, 
-        rgba(255,255,255,0.95) 20%, 
-        rgba(255,255,255,0.6) 45%, 
-        rgba(255,255,255,0) 75%, 
+        rgba(255,255,255,0.7) 0%, 
+        rgba(255,255,255,0.5) 15%, 
+        rgba(255,255,255,0) 35%, 
         rgba(255,255,255,0) 100%);
     z-index: 2;
     pointer-events: none;
@@ -600,12 +610,15 @@ img {
     top: 0; left: 0;
     width: 200%;
     height: 100%;
-    /* 110度（少し斜め）の光の筋（透明→白→透明） */
+    /* メインの太い光 ＋ サブの細い光 でオーロラのような立体感を出す */
     background: linear-gradient(110deg,
         rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0) 20%,
-        rgba(255,255,255,0.85) 50%,
-        rgba(255,255,255,0) 80%,
+        rgba(255,255,255,0) 10%,
+        rgba(255,255,255,0.4) 30%, /* メインの太い光 */
+        rgba(255,255,255,0) 45%,
+        rgba(255,255,255,0) 55%,
+        rgba(255,255,255,0.2) 65%, /* サブの細くて薄い光 */
+        rgba(255,255,255,0) 75%,
         rgba(255,255,255,0) 100%
     );
     will-change: transform;
