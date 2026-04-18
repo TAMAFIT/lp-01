@@ -95,21 +95,8 @@
     <main>
         <section class="hero">
             <div class="hero-img">
-                <img class="hero-slide slide1" src="images/大林1.webp" alt="トレーニング">
-                <img class="hero-slide slide2" src="images/6.webp" alt="トレーニング">
-                <img class="hero-slide slide3" src="images/14.webp" alt="トレーニング">
-                <img class="hero-slide slide4" src="images/玉井1.webp" alt="トレーニング">
-                <img class="hero-slide slide5" src="images/15.webp" alt="トレーニング">
-                <img class="hero-slide slide6" src="images/大林2.webp" alt="トレーニング">
-                <img class="hero-slide slide7" src="images/16.webp" alt="トレーニング">
-                <img class="hero-slide slide8" src="images/玉井2.webp" alt="トレーニング">
-                <img class="hero-slide slide9" src="images/17.webp" alt="トレーニング">
-                <img class="hero-slide slide10" src="images/大林3.webp" alt="トレーニング">
-                <img class="hero-slide slide11" src="images/18.webp" alt="トレーニング">
-                <img class="hero-slide slide12" src="images/玉井3.webp" alt="トレーニング">
-                <img class="hero-slide slide13" src="images/大林4.webp" alt="トレーニング">
-                <img class="hero-slide slide14" src="images/20.webp" alt="トレーニング">
-                <img class="hero-slide slide15" src="images/玉井4.webp" alt="トレーニング">
+                <img class="hero-slide slide-a active" src="images/大林1.webp" alt="トレーニング" id="hero-slide-a">
+                <img class="hero-slide slide-b" src="images/6.webp" alt="トレーニング" id="hero-slide-b">
                 <!-- ① 文字の読みやすさを担保する静的なモヤ -->
                 <div class="hero-static-overlay"></div>
                 <!-- ② 永遠に流れ続ける光のストリーム -->
@@ -486,6 +473,42 @@
     <!-- <script src="tamachan-data.js"></script> -->
 
     <script src="main.js"></script>
+    <script>
+        // 超軽量：2枚の画像タグ（皿回し方式）で15枚の画像をクロスフェードする
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = [
+                "images/大林1.webp", "images/6.webp", "images/14.webp", "images/玉井1.webp",
+                "images/15.webp", "images/大林2.webp", "images/16.webp", "images/玉井2.webp",
+                "images/17.webp", "images/大林3.webp", "images/18.webp", "images/玉井3.webp",
+                "images/大林4.webp", "images/20.webp", "images/玉井4.webp"
+            ];
+            const slideA = document.getElementById('hero-slide-a');
+            const slideB = document.getElementById('hero-slide-b');
+            let currentIndex = 0;
+            let showA = true;
+
+            setInterval(() => {
+                if (showA) {
+                    slideA.classList.remove('active');
+                    slideB.classList.add('active');
+                    // 見えなくなった1.5秒後に、次の次の画像を裏でロードしておく
+                    setTimeout(() => {
+                        let prepIndex = (currentIndex + 2) % images.length;
+                        slideA.src = images[prepIndex];
+                    }, 1500);
+                } else {
+                    slideB.classList.remove('active');
+                    slideA.classList.add('active');
+                    setTimeout(() => {
+                        let prepIndex = (currentIndex + 2) % images.length;
+                        slideB.src = images[prepIndex];
+                    }, 1500);
+                }
+                currentIndex = (currentIndex + 1) % images.length;
+                showA = !showA;
+            }, 4000); 
+        });
+    </script>
 </body>
 
 </html>

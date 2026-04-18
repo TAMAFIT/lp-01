@@ -552,31 +552,13 @@ img {
     object-fit: cover;
     background-position: center;
     opacity: 0;
-    animation: sliderFade 60s infinite;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 0;
 }
 
-.hero-slide.slide1 { animation-delay: 0s; }
-.hero-slide.slide2 { animation-delay: 4s; }
-.hero-slide.slide3 { animation-delay: 8s; }
-.hero-slide.slide4 { animation-delay: 12s; }
-.hero-slide.slide5 { animation-delay: 16s; }
-.hero-slide.slide6 { animation-delay: 20s; }
-.hero-slide.slide7 { animation-delay: 24s; }
-.hero-slide.slide8 { animation-delay: 28s; }
-.hero-slide.slide9 { animation-delay: 32s; }
-.hero-slide.slide10 { animation-delay: 36s; }
-.hero-slide.slide11 { animation-delay: 40s; }
-.hero-slide.slide12 { animation-delay: 44s; }
-.hero-slide.slide13 { animation-delay: 48s; }
-.hero-slide.slide14 { animation-delay: 52s; }
-.hero-slide.slide15 { animation-delay: 56s; }
-
-@keyframes sliderFade {
-    0%       { opacity: 0; }
-    2%       { opacity: 1; }
-    6.66%    { opacity: 1; }
-    8.66%    { opacity: 0; }
-    100%     { opacity: 0; }
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
 }
 
 /* ① 文字の読みやすさを担保する静的なモヤ */
