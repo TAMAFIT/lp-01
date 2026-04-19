@@ -60,7 +60,7 @@ body {
     position: relative;
 }
 
-/* 画面全体のオーロラ背景 */
+/* 画面全体のプロフェッショナル背景（人工芝の画像を白く薄めて固定） */
 body::before {
     content: '';
     position: fixed;
@@ -69,12 +69,13 @@ body::before {
     width: 100vw;
     height: 100vh;
     z-index: -1;
+    /* 白の透明度を少し弱め（60%〜65%）にして写真をはっきり見せる */
     background-image:
-        radial-gradient(circle at 10% 10%, rgba(0, 184, 169, 0.25) 0%, transparent 40%),
-        radial-gradient(circle at 90% 20%, rgba(255, 26, 125, 0.2) 0%, transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(156, 81, 255, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 90%, rgba(255, 193, 7, 0.2) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+        linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.65)),
+        url('images/18.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     pointer-events: none;
 }
 
