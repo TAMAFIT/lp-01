@@ -158,23 +158,23 @@
                         <div class="reason-text">
                             <i class="material-icons-round reason-icon">science</i>
                             <h3>1. 完全オーダーメイド指導</h3>
-                            <p>体力やその日の体調に合わせて、一番効果的で無理のないメニューをご提案します。「運動が苦手」な方こそ、プロの個別指導で楽しく安全に変わる実感を手に入れてください。</p>
+                            <p>体力や体調に合わせて、<span style="display: inline-block;">最も効果的で</span><span style="display: inline-block;">無理のない</span>メニューを提案します。「運動が苦手」な方こそ、プロの指導で<span style="display: inline-block;">楽しく安全に</span>変わる実感をご提供します。</p>
                         </div>
                         <div class="reason-img-box"><img src="images/大林4.webp" alt="指導風景" loading="lazy"></div>
                     </div>
                     <div class="reason-row reason-yellow">
                         <div class="reason-text">
                             <i class="material-icons-round reason-icon">lunch_dining</i>
-                            <h3>2. 食べながら変わる食事管理</h3>
-                            <p>極端な糖質制限など、一生続けられない無理な我慢はさせません。外食や好きな食事も楽しみながら、あなたに最適なPFCバランスを身につける「一生モノの食事知識」をサポートします。</p>
+                            <h3>2. 無理のない食事サポート</h3>
+                            <p>極端な糖質制限など、一生続けられない<span style="display: inline-block;">無理な我慢は</span>させません。好きな食事も楽しみながら、<span style="display: inline-block;">最適なバランスを</span>身につける<span style="display: inline-block;">「一生モノの知識」</span>をサポートします。</p>
                         </div>
                         <div class="reason-img-box"><img src="images/6.webp" alt="食事指導イメージ" loading="lazy"></div>
                     </div>
                     <div class="reason-row reason-purple">
                         <div class="reason-text">
                             <i class="material-icons-round reason-icon">vpn_key</i>
-                            <h3>3. あなただけの完全貸切エリア</h3>
-                            <p>大型ジム特有の順番待ちはありません。必要な設備が揃った専用エリアとトレーナーを贅沢に貸切。あなたのペースに合わせた指導で、最も集中してトレーニングできる特別な環境をお約束します。</p>
+                            <h3>3. 集中できる完全貸切空間</h3>
+                            <p>大型ジム特有の<span style="display: inline-block;">順番待ちは</span>ありません。必要な設備とトレーナーを<span style="display: inline-block;">贅沢に貸切。</span>あなたのペースに合わせて、<span style="display: inline-block;">最も集中できる</span>特別な環境をお約束します。</p>
                         </div>
                         <div class="reason-img-box"><img src="images/設備1.webp" alt="完全個室のジム内観" loading="lazy"></div>
                     </div>
@@ -491,22 +491,22 @@
                 if (showA) {
                     slideA.classList.remove('active');
                     slideB.classList.add('active');
-                    // 見えなくなった1.5秒後に、次の次の画像を裏でロードしておく
+                    // フェードアウト後(0.8秒)に、次の次の画像を裏でロードしておく
                     setTimeout(() => {
                         let prepIndex = (currentIndex + 2) % images.length;
                         slideA.src = images[prepIndex];
-                    }, 1500);
+                    }, 800);
                 } else {
                     slideB.classList.remove('active');
                     slideA.classList.add('active');
                     setTimeout(() => {
                         let prepIndex = (currentIndex + 2) % images.length;
                         slideB.src = images[prepIndex];
-                    }, 1500);
+                    }, 800);
                 }
                 currentIndex = (currentIndex + 1) % images.length;
                 showA = !showA;
-            }, 4000); 
+            }, 2500); 
         });
     </script>
 </body>
