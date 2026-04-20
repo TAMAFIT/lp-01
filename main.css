@@ -64,10 +64,10 @@ body {
 body::before {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: -10vh; /* URLバー収縮時などの万が一のズレに備えて少し上下左右を広めに取る */
+    bottom: -10vh;
+    left: -10vw;
+    right: -10vw;
     z-index: -1;
     /* 白の透明度を少し弱め（60%〜65%）にして写真をはっきり見せる */
     background-image:
@@ -77,6 +77,9 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     pointer-events: none;
+    /* ▼ プルプル＆激重対策：ハードウェアアクセラレーションを効かせ、再計算を防ぐ ▼ */
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 h1,
