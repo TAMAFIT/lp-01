@@ -855,7 +855,7 @@ img {
 }
 
 #price .sec-header::after {
-    background: var(--yellow-grad);
+    display: none;
 }
 
 #reserve .sec-sub {
@@ -1310,16 +1310,20 @@ img {
 }
 
 .col-course {
-    width: 34%;
+    width: 42%;
 }
 
 .col-60 {
-    width: 33%;
+    width: 29%;
     background: rgba(0, 184, 169, 0.05);
 }
 
 .col-30 {
-    width: 33%;
+    width: 29%;
+}
+
+.price-table tbody td {
+    vertical-align: bottom;
 }
 
 .price-table tbody tr:last-child td {
@@ -2072,9 +2076,10 @@ img {
     border-bottom: 2px dashed #e2e8f0 !important;
 }
 
-.total-label {
-    text-align: right;
-    font-size: 11px;
+.price-table .total-label {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
     color: var(--text-sub);
     vertical-align: middle;
 }
@@ -2144,7 +2149,22 @@ img {
     white-space: nowrap;
 }
 
-/* recommend-badgeと完全統一：楕円ピル形状・同サイズ・コース名の上に配置 */
+.price-concept-line1 {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text-main);
+    margin: 10px 0 4px;
+    white-space: nowrap;
+}
+
+.price-concept-line2 {
+    font-size: 13px;
+    color: var(--text-sub);
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* recommend-badgeと完全統一：楕円ピル形等 */
 .best-value-tag {
     display: inline-block;
     background: var(--accent-mint, #00B8A9);
@@ -2155,4 +2175,45 @@ img {
     margin-bottom: 5px;
     font-weight: 900;
     box-shadow: 0 2px 5px rgba(0, 184, 169, 0.3);
+}
+
+/* 打ち消し線（通常単価）・差額バッジ */
+.strike-price {
+    font-size: 11px;
+    color: var(--text-sub);
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+.strike-price s {
+    color: #bbb;
+}
+
+.saving-badge {
+    display: inline-block;
+    background: #ff6b6b;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin-left: 2px;
+}
+
+/* ドロップダウン内の総額比較 */
+.total-compare {
+    font-size: 11px;
+    color: #bbb;
+    margin-bottom: 2px;
+}
+
+.total-strike {
+    font-size: 11px;
+}
+
+.total-saving {
+    font-size: 11px;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-top: 4px;
 }

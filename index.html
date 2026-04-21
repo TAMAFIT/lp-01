@@ -242,9 +242,10 @@
             <div class="container">
                 <div class="sec-header">
                     <span class="sec-sub">PRICE</span>
-                    <h2 class="sec-title">料金表（チケット制）</h2>
-                    <div class="nyuukakin-badge">✓ 入会金無料</div>
-                    <p class="price-copy-hint">たくさん通うほど、1回あたりがお得！</p>
+                    <div class="nyuukakin-badge" style="margin-bottom: 20px;">✓ 今だけ入会金無料</div>
+                    <h2 class="sec-title">料金表（回数制）</h2>
+                    <p class="price-concept-line1">通う程お得な料金システム！</p>
+                    <p class="price-concept-line2">頻度に応じ価格が変わる</p>
                 </div>
 
                 <div class="price-table-wrapper">
@@ -252,56 +253,96 @@
                         <thead>
                             <tr>
                                 <th class="col-course">コース</th>
-                                <th class="col-60">60分<br><span class="per-session-badge">1回あたり</span>
-                                </th>
-                                <th class="col-30">30分<br><span class="per-session-badge">1回あたり</span>
-                                </th>
+                                <th class="col-60">60分<br><span class="per-session-badge">1回あたり</span></th>
+                                <th class="col-30">30分<br><span class="per-session-badge">1回あたり</span></th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- 月4回コース -->
                             <tr class="recommend-row">
                                 <td class="course-name">
                                     <span class="recommend-badge">人気No.1</span><br>
-                                    週1回コース<br><span style="font-size:12px; font-weight:normal;">(月4回・回数券)</span>
+                                    月4回コース
                                     <button class="total-toggle-btn" onclick="toggleTotal(this)">▼ 合計額を見る</button>
                                 </td>
-                                <td class="price-val highlight">7,700<span class="yen">円</span></td>
-                                <td class="price-val">4,400<span class="yen">円</span></td>
+                                <td class="price-val highlight">
+                                    7,700<span class="yen">円</span>
+                                    <div class="strike-price">通常 <s>9,900円</s></div>
+                                </td>
+                                <td class="price-val">
+                                    4,400<span class="yen">円</span>
+                                    <div class="strike-price">通常 <s>5,500円</s></div>
+                                </td>
                             </tr>
                             <tr class="total-row">
-                                <td class="total-label">月4回総額</td>
-                                <td class="total-val"><span class="total-prefix">総額</span> 30,800<span class="yen">円</span></td>
-                                <td class="total-val"><span class="total-prefix">総額</span> 17,600<span class="yen">円</span></td>
+                                <td class="total-label">月4回 総額</td>
+                                <td class="total-val">
+                                    30,800<span class="yen">円</span>
+                                    <div class="total-compare"><s class="total-strike">通常 39,600円</s></div>
+                                </td>
+                                <td class="total-val">
+                                    17,600<span class="yen">円</span>
+                                    <div class="total-compare"><s class="total-strike">通常 22,000円</s></div>
+                                </td>
                             </tr>
+                            <!-- 月8回コース -->
                             <tr>
                                 <td class="course-name">
                                     <span class="best-value-tag">★ 最もお得</span><br>
-                                    週2回コース<br><span style="font-size:12px; font-weight:normal;">(月8回・回数券)</span>
+                                    月8回コース
                                     <button class="total-toggle-btn" onclick="toggleTotal(this)">▼ 合計額を見る</button>
                                 </td>
-                                <td class="price-val">6,600<span class="yen">円</span></td>
-                                <td class="price-val">3,850<span class="yen">円</span></td>
+                                <td class="price-val">
+                                    6,600<span class="yen">円</span>
+                                    <div class="strike-price">通常 <s>9,900円</s></div>
+                                </td>
+                                <td class="price-val">
+                                    3,850<span class="yen">円</span>
+                                    <div class="strike-price">通常 <s>5,500円</s></div>
+                                </td>
                             </tr>
                             <tr class="total-row">
-                                <td class="total-label">月8回総額</td>
-                                <td class="total-val"><span class="total-prefix">総額</span> 52,800<span class="yen">円</span></td>
-                                <td class="total-val"><span class="total-prefix">総額</span> 30,800<span class="yen">円</span></td>
+                                <td class="total-label">月8回 総額</td>
+                                <td class="total-val">
+                                    52,800<span class="yen">円</span>
+                                    <div class="total-compare"><s class="total-strike">通常 79,200円</s></div>
+                                </td>
+                                <td class="total-val">
+                                    30,800<span class="yen">円</span>
+                                    <div class="total-compare"><s class="total-strike">通常 44,000円</s></div>
+                                </td>
                             </tr>
+                            <!-- 月2回コース -->
                             <tr>
-                                <td class="course-name">月2回コース<br><span style="font-size:12px; font-weight:normal;">(月2回・回数券)</span>
+                                <td class="course-name">
+                                    月2回コース
                                     <button class="total-toggle-btn" onclick="toggleTotal(this)">▼ 合計額を見る</button>
                                 </td>
-                                <td class="price-val">8,800<span class="yen">円</span></td>
-                                <td class="price-val">4,950<span class="yen">円</span></td>
+                                <td class="price-val">
+                                    8,800<span class="yen">円</span>
+                                    <div class="strike-price">通常 <s>9,900円</s></div>
+                                </td>
+                                <td class="price-val">
+                                    4,950<span class="yen">円</span>
+                                    <div class="strike-price">通常 <s>5,500円</s></div>
+                                </td>
                             </tr>
                             <tr class="total-row">
-                                <td class="total-label">月2回総額</td>
-                                <td class="total-val"><span class="total-prefix">総額</span> 17,600<span class="yen">円</span></td>
-                                <td class="total-val"><span class="total-prefix">総額</span> 9,900<span class="yen">円</span></td>
+                                <td class="total-label">月2回 総額</td>
+                                <td class="total-val">
+                                    17,600<span class="yen">円</span>
+                                    <div class="total-compare"><s class="total-strike">通常 19,800円</s></div>
+                                </td>
+                                <td class="total-val">
+                                    9,900<span class="yen">円</span>
+                                    <div class="total-compare"><s class="total-strike">通常 11,000円</s></div>
+                                </td>
                             </tr>
+                            <!-- 通常料金（都度払い） -->
                             <tr>
-                                <td class="course-name">単発<br><span
-                                        style="font-size:12px; color:var(--text-sub); font-weight:normal; display:inline-block;">(通常料金・都度払い)</span>
+                                <td class="course-name">
+                                    通常料金<br>
+                                    <span style="font-size:12px; color:var(--text-sub); font-weight:normal;">都度払い</span>
                                 </td>
                                 <td class="price-val">9,900<span class="yen">円</span></td>
                                 <td class="price-val">5,500<span class="yen">円</span></td>
@@ -309,12 +350,13 @@
                         </tbody>
                     </table>
                     <p class="price-note">
-                        ※料金はすべて税込です。単発以外は各コースのセット回数券でのご購入となります。<br>
-                        ※例：一番人気の「週1回コース(月4回・回数券)」の場合、7,700円×4回分 ＝ 30,800円(税込) のお支払いとなります。
+                        ※料金はすべて税込です。通常料金以外は各コースのセット回数券でのご購入となります。<br>
+                        ※例：「月4回コース」の60分の場合、7,700円×4回分 ＝ 30,800円(税込) のお支払いとなります。
                     </p>
                 </div>
             </div>
         </section>
+
 
         <section id="reserve" class="section-block">
             <div class="container">
