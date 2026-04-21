@@ -2118,3 +2118,41 @@ img {
         font-size: 10px;
     }
 }
+
+/* ==========================================
+   入会金バッジ・お得コピー・最もお得タグ
+   ========================================== */
+.nyuukakin-badge {
+    display: inline-block;
+    background: var(--accent-mint, #00B8A9);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+    margin: 8px 0 4px;
+    text-align: center;
+}
+
+.price-copy-hint {
+    font-size: 12px;
+    color: var(--text-sub);
+    margin: 6px 0 0;
+    font-style: italic;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+/* recommend-badgeと完全統一：楕円ピル形状・同サイズ・コース名の上に配置 */
+.best-value-tag {
+    display: inline-block;
+    background: var(--accent-mint, #00B8A9);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    margin-bottom: 5px;
+    font-weight: 900;
+    box-shadow: 0 2px 5px rgba(0, 184, 169, 0.3);
+}
