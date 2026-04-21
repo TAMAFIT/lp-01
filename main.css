@@ -2027,3 +2027,94 @@ img {
         min-height: 300px;
     }
 }
+
+/* ==========================================
+   料金表: 合計金額ドロップダウン
+   ========================================== */
+.total-toggle-btn {
+    background: transparent;
+    color: var(--text-sub);
+    border: none;
+    outline: none;
+    padding: 2px 0;
+    font-size: 10px;
+    font-weight: normal;
+    cursor: pointer;
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.total-toggle-btn:hover {
+    color: var(--primary);
+}
+
+.total-row {
+    display: none;
+    background-color: #fafbfc;
+}
+
+.total-row.show {
+    display: table-row;
+    animation: slideDownFade 0.4s ease forwards;
+}
+
+/* 既存の .price-table td のパディングを上書きする */
+.price-table .total-row td {
+    padding: 12px 10px !important;
+    border-bottom: 2px dashed #e2e8f0 !important;
+}
+
+.total-label {
+    text-align: right;
+    font-size: 11px;
+    color: var(--text-sub);
+    vertical-align: middle;
+}
+
+.price-table .total-val {
+    font-size: 18px !important;
+    font-weight: 900;
+    color: var(--text-main);
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.total-prefix {
+    font-size: 11px;
+    font-weight: normal;
+    color: var(--text-sub);
+    margin-right: 2px;
+}
+
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* モバイルでの合計金額の折り返し防止・サイズ調整 */
+@media screen and (max-width: 768px) {
+    .price-table .total-row td {
+        padding: 10px 4px !important;
+    }
+    .price-table .total-val {
+        font-size: 15px !important;
+    }
+    .total-prefix {
+        font-size: 10px;
+    }
+}

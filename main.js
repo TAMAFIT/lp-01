@@ -207,3 +207,22 @@ markdown記号（**など）は使わないでたま。
                 }
             }
         });
+
+// ==========================================
+// ▼ 料金表のアコーディオン（合計金額用） ▼
+// ==========================================
+window.toggleTotal = function(btn) {
+    const tr = btn.closest('tr');
+    if (!tr) return;
+    const nextTr = tr.nextElementSibling;
+    
+    if (nextTr && nextTr.classList.contains('total-row')) {
+        nextTr.classList.toggle('show');
+        
+        if (nextTr.classList.contains('show')) {
+            btn.innerHTML = '▲ 閉じる';
+        } else {
+            btn.innerHTML = '▼ 合計額を見る';
+        }
+    }
+};
