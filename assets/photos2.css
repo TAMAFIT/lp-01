@@ -1,0 +1,22 @@
+/*
+  Photo slot mapping file.
+  These map the data-photo numbers sequentially to the WebP files in the user-images folder.
+*/
+.photo[data-photo="1"] { --photo-url: url("../user-images/1.webp"); border: none; }
+.photo[data-photo="2"] { --photo-url: url("../user-images/2.webp"); border: none; }
+.photo[data-photo="3"] { --photo-url: url("../user-images/3.webp"); border: none; }
+.photo[data-photo="4"] { --photo-url: url("../user-images/4.webp"); border: none; }
+.photo[data-photo="5"] { --photo-url: url("../user-images/5.webp"); border: none; }
+.photo[data-photo="6"] { --photo-url: url("../user-images/6.webp"); border: none; }
+.photo[data-photo="7"] { --photo-url: url("../user-images/7.webp"); border: none; }
+.photo[data-photo="8"] { --photo-url: url("../user-images/8.webp"); border: none; }
+.photo[data-photo="9"] { --photo-url: url("../user-images/9.webp"); border: none; }
+.photo[data-photo="10"] { --photo-url: url("../user-images/10.webp"); border: none; }
+.photo[data-photo="11"] { --photo-url: url("../user-images/11.webp"); border: none; }
+.photo[data-photo="12"] { --photo-url: url("../user-images/12.webp"); border: none; }
+.photo[data-photo="13"] { --photo-url: url("../user-images/13.webp"); border: none; }
+.photo[data-photo="14"] { --photo-url: url("../user-images/14.webp"); border: none; }
+.photo[data-photo="15"] { --photo-url: url("../user-images/15.webp"); border: none; }
+.photo[data-photo="16"] { --photo-url: url("../user-images/16.webp"); border: none; }
+
+.photo::after { display: none; }

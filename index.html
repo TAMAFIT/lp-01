@@ -1,586 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>たまフィット | 高松市今里町のパーソナルジム</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAMA FIT | Smartphone LP Mock</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Oswald:wght@700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <link rel="stylesheet" href="main.css?v=2">
-</head>
-
-<body>
-    <header class="header">
-        <div class="header-container">
-            <a href="#" class="logo">
-                <img src="images/9.webp" alt="" class="logo-img">
-                <span class="logo-text">たまフィット</span>
-            </a>
-
-            <button class="hamburger-btn" id="hamburger-btn" aria-label="メニューを開く">
-                <i class="material-icons-round" id="hamburger-icon">menu</i>
-            </button>
-
-            <nav class="nav-links" id="nav-links">
-                <a href="#reason" class="nav-item">理由</a>
-                <a href="#trainer" class="nav-item">トレーナー</a>
-                <a href="#price" class="nav-item">料金</a>
-                <a href="#faq" class="nav-item">Q&A</a>
-                <a href="#access" class="nav-item">店舗</a>
-
-                <a href="https://line.me/R/ti/p/@072WKBWC" class="header-btn pc-only">LINEで無料体験・相談</a>
-
-                <div class="mobile-menu-btns">
-                    <a href="https://line.me/R/ti/p/@072WKBWC" class="header-btn btn-reserve">
-                        <i class="material-icons-round">calendar_today</i> LINEで無料体験・相談
-                    </a>
-                    <a href="https://line.me/R/ti/p/@072WKBWC" class="header-btn btn-consult">
-                        <i class="material-icons-round">chat</i> LINEで相談
-                    </a>
-                    <a href="https://maps.google.com/maps?q=香川県高松市今里町393-1" class="header-btn btn-map" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="material-icons-round">map</i> マップを開く
-                    </a>
-                </div>
-            </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .photo[data-photo="1"] { --photo-url: url("./user-images/1.webp"); border: none; }
+      .photo[data-photo="2"] { --photo-url: url("./user-images/2.webp"); border: none; }
+      .photo[data-photo="3"] { --photo-url: url("./user-images/3.webp"); border: none; }
+      .photo[data-photo="4"] { --photo-url: url("./user-images/4.webp"); border: none; }
+      .photo[data-photo="5"] { --photo-url: url("./user-images/5.webp"); border: none; }
+      .photo[data-photo="6"] { --photo-url: url("./user-images/6.webp"); border: none; }
+      .photo[data-photo="7"] { --photo-url: url("./user-images/7.webp"); border: none; }
+      .photo[data-photo="8"] { --photo-url: url("./user-images/8.webp"); border: none; }
+      .photo[data-photo="9"] { --photo-url: url("./user-images/9.webp"); border: none; }
+      .photo[data-photo="10"] { --photo-url: url("./user-images/10.webp"); border: none; }
+      .photo[data-photo="11"] { --photo-url: url("./user-images/11.webp"); border: none; }
+      .photo[data-photo="12"] { --photo-url: url("./user-images/12.webp"); border: none; }
+      .photo[data-photo="13"] { --photo-url: url("./user-images/13.webp"); border: none; }
+      .photo[data-photo="14"] { --photo-url: url("./user-images/14.webp"); border: none; }
+      .photo[data-photo="15"] { --photo-url: url("./user-images/15.webp"); border: none; }
+      .photo[data-photo="16"] { --photo-url: url("./user-images/16.webp"); border: none; }
+      .photo::after { display: none; }
+    </style>
+  </head>
+  <body>
+    <div class="lp-scale">
+    <main class="lp">
+      <section class="page hero" id="page-1">
+        <div class="hero-banner">
+          <img src="./first.webp" alt="たまフィット - 変わりたいを全力サポート！" />
         </div>
-    </header>
+        <div class="hero-cta-wrapper">
+          <a href="https://liff.line.me/2009803249-QQEbOzvg" class="cta pulse">
+            <span>LINE</span>無料体験を予約する
+          </a>
+        </div>
 
-    <div class="menu-overlay" id="menu-overlay"></div>
+      </section>
 
-    <div class="sticky-footer">
-        <a href="https://line.me/R/ti/p/@072WKBWC" class="footer-btn btn-line">
-            <span class="footer-main"><i class="material-icons-round" style="font-size:18px;">chat</i>【無料】LINEで相談</span>
-            <span class="footer-sub">※無理な勧誘は一切ありません</span>
+      <section class="page problem" id="page-2">
+        <div class="problem-intro">
+          <h2>こんなお悩み、<br />ありませんか？</h2>
+          <p>運動が苦手、体力に自信がなくても大丈夫。<br />40代〜60代の方も安心して始められます。</p>
+        </div>
+        <ol class="worry-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5c-2.2 0-4 1.8-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            <span>運動が<br />続かない</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+            <span>体力の低下が<br />気になる</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>自己流では<br />不安</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>大型ジムは<br />周りの目が気になる</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span>腰・膝に配慮<br />しながら始めたい</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+            <span>食事制限が<br />厳しそうで不安</span>
+          </li>
+        </ol>
+        <div class="recommend">
+          <div>
+            <h2>たまフィットは<br />こんな方に<span>おすすめ</span></h2>
+            <ul class="check-list">
+              <li>ダイエットしたい</li>
+              <li>健康的な体を作りたい</li>
+              <li>自分に合った運動をしたい</li>
+              <li>一人では続けにくい</li>
+              <li>ジム未経験でも安心して始めたい</li>
+            </ul>
+          </div>
+        </div>
+        <div class="point">
+          <strong>お任せください</strong>
+          <p>ゼロからの体作りを、専属トレーナーがマンツーマンでサポートします。</p>
+          <div class="photo" data-photo="3"></div>
+        </div>
+      </section>
+
+      <section class="page reasons" id="page-3">
+        <h2>たまフィットが<br />選ばれる<span>3</span>つの理由</h2>
+        <p class="lead">続けやすさも、結果も大切に。</p>
+        <article class="reason-card">
+          <b>1</b>
+          <div><h3>完全オーダーメイド指導</h3><p>体力・体調・目標に合わせて、無理なく効果的なメニューをご提案。</p></div>
+          <div class="photo" data-photo="4"></div>
+        </article>
+        <article class="reason-card">
+          <b>2</b>
+          <div><h3>無理のない食事サポート</h3><p>極端な糖質制限ではなく、好きな食事も楽しみながらPFCバランスを身につけます。</p></div>
+          <div class="photo" data-photo="5"></div>
+        </article>
+        <article class="reason-card">
+          <b>3</b>
+          <div><h3>あなた専用の設備を確保</h3><p>順番待ちなし。あなた専用に確保された設備で、自分のペースでトレーニングに集中できます。</p></div>
+          <div class="photo" data-photo="6"></div>
+        </article>
+        <a class="cta" href="https://liff.line.me/2009803249-QQEbOzvg"><span>LINE</span>無料体験を予約する</a>
+      </section>
+
+      <section class="page trainers" id="page-4">
+        <h2>トレーナー紹介</h2>
+        <p class="lead">あなたに寄り添う<span>2人</span>のトレーナーがサポート</p>
+
+        <div class="trainer-card obayashi">
+          <div class="photo" data-photo="7"></div>
+          <div class="content-area">
+            <h3>大林<span>トレーナー</span></h3>
+            <p class="trainer-tag">運動初心者・中高年の方も安心</p>
+            <ul class="feature-list">
+              <li>
+                <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+                <p>体力に合わせて<br>無理なく調整</p>
+              </li>
+              <li>
+                <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path stroke="#fff" stroke-width="2" d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="9" r="1.5" fill="#fff"/><circle cx="15" cy="9" r="1.5" fill="#fff"/></svg></span>
+                <p>楽しく続けられる<br>やさしい指導</p>
+              </li>
+              <li>
+                <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+                <p>“できた”を増やす<br>サポート</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="trainer-card tamai">
+          <div class="photo" data-photo="8"></div>
+          <div class="content-area">
+            <h3>玉井<span>トレーナー</span></h3>
+            <p class="trainer-tag">ダイエットから本格指導まで</p>
+            <ul class="feature-list">
+              <li>
+                <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5c-2.2 0-4 1.8-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg></span>
+                <p>初心者の減量も<br>丁寧に対応</p>
+              </li>
+              <li>
+                <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="9" width="4" height="6" rx="1"/><rect x="18" y="9" width="4" height="6" rx="1"/><rect x="6" y="10" width="2" height="4"/><rect x="16" y="10" width="2" height="4"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2"/></svg></span>
+                <p>ボディメイクや<br>大会指導も可能</p>
+              </li>
+              <li>
+                <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+                <p>目標別に<br>幅広くサポート</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="closing">目標やお悩みに合わせて、<br />私たちに<span>お任せください。</span></p>
+      </section>
+
+      <section class="page flow" id="page-5">
+        <p class="ribbon center">たまフィットの無料体験フロー</p>
+        <h2>無料体験〜<br>ご入会までの流れ</h2>
+        <p class="lead">はじめてでも、安心して進められます。</p>
+        <div class="steps">
+          <article><b>STEP<br />1</b><div><h3>LINEで友だち追加・予約</h3><p>LINEで希望日時を選択</p></div><div class="photo" data-photo="9"></div></article>
+          <article><b>STEP<br />2</b><div><h3>カウンセリング</h3><p>お悩み・目標を丁寧にヒアリング</p></div><div class="photo" data-photo="10"></div></article>
+          <article><b>STEP<br />3</b><div><h3>体験トレーニング</h3><p>体力や柔軟性に合わせて無理なく体験</p></div><div class="photo" data-photo="11"></div></article>
+          <article><b>STEP<br />4</b><div><h3>最適プランのご提案</h3><p>継続しやすい方法を一緒に考えます</p></div><div class="photo" data-photo="12"></div></article>
+        </div>
+        <div class="two-box">
+          <article><h3>持ち物</h3><p>ウェア、飲み物、室内シューズ（任意）</p></article>
+          <article><h3>無料相談だけでも歓迎</h3><p>無理な勧誘なし。相談だけでもOK</p></article>
+        </div>
+      </section>
+
+      <section class="page price" id="page-6">
+        <h2>料金システム</h2>
+        <p class="lead">回数券制だから安心。<br />頻度に合ったお得なコースを選べます。</p>
+        <div class="benefits"><span>回数券制</span><span>面倒な手続き不要</span><span>今だけ 入会金無料</span></div>
+        <div class="price-grid">
+          <article class="best"><h3>月8回コース｜最もお得</h3><p><b>60分</b> 1回分 <strong>6,600</strong>円（税込）</p><p><b>30分</b> 1回分 <strong>3,850</strong>円（税込）</p></article>
+          <article class="popular"><h3>月4回コース｜人気No.1</h3><p><b>60分</b> 1回分 <strong>7,700</strong>円（税込）</p><p><b>30分</b> 1回分 <strong>4,400</strong>円（税込）</p></article>
+          <article><h3>月2回コース</h3><p><b>60分</b> 1回分 <strong>8,800</strong>円（税込）</p><p><b>30分</b> 1回分 <strong>4,950</strong>円（税込）</p></article>
+          <article><h3>都度払い</h3><p><b>60分</b> 1回分 <strong>9,900</strong>円（税込）</p><p><b>30分</b> 1回分 <strong>5,500</strong>円（税込）</p></article>
+        </div>
+        <div class="message">回数に合わせて、無理なく<span>継続しやすい</span>料金設計です。</div>
+      </section>
+
+      <section class="page access" id="page-7">
+        <div class="title-wrapper">
+          <h2 class="access-title">アクセス</h2>
+        </div>
+        <p class="address-head">〒760-0078<br />香川県高松市今里町393-1<br />前川ビル1F</p>
+        <div class="access-highlights">
+          <strong>駐車場2台完備</strong>
+          <strong>目の前にバス停有り</strong>
+        </div>
+        <div class="map-wrapper">
+          <iframe src="https://maps.google.com/maps?q=香川県高松市今里町393-1%20前川ビル1F&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="access-photos">
+          <figure class="access-figure">
+            <figcaption>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+              駐車場
+            </figcaption>
+            <div class="photo" data-photo="13"></div>
+          </figure>
+          <figure class="access-figure">
+            <figcaption>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="15" cy="18" r="2"/></svg>
+              バス停
+            </figcaption>
+            <div class="photo" data-photo="14"></div>
+          </figure>
+        </div>
+
+        <dl class="premium-info-table">
+          <div class="info-row">
+            <dt>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <nobr>営業時間</nobr>
+            </dt>
+            <dd><strong>10:00-22:00</strong><span>完全予約制</span></dd>
+          </div>
+          <div class="info-row">
+            <dt>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+              <nobr>駐車場</nobr>
+            </dt>
+            <dd>店舗前に2台完備。誘導サポート可能で安心。</dd>
+          </div>
+          <div class="info-row">
+            <dt>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="15" cy="18" r="2"/></svg>
+              <nobr>バス停</nobr>
+            </dt>
+            <dd><strong><nobr>琴電レインボー循環バス</nobr></strong><span>「トキワテニス前」下車</span></dd>
+          </div>
+        </dl>
+        <a class="cta outline" href="https://maps.app.goo.gl/yLEFYsBw6ApkV6fWA" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Google Mapアプリで開く
         </a>
-        <a href="https://line.me/R/ti/p/@072WKBWC" class="footer-btn btn-web">
-            <span class="footer-main"><i class="material-icons-round" style="font-size:18px;">calendar_today</i>無料体験にすぐ予約</span>
-            <span class="footer-sub">※空き状況もすぐ確認できます</span>
-        </a>
-    </div>
+      </section>
 
-    <!-- ▼ チャットボット（一時非表示・復活可能なように保管） ▼
-    <div class="chat-widget">
-        <div class="chat-window" id="chat-window">
-            <div class="chat-header">
-                <span>たまちゃんに相談</span>
-                <button class="chat-close" id="chat-close" aria-label="チャットを閉じる"><i
-                        class="material-icons-round">close</i></button>
-            </div>
-            <div class="chat-body" id="chat-body">
-                <div class="chat-msg bot">こんにちはたま！ジムのことで分からないことがあったら何でも聞いてたま！</div>
-            </div>
-            <div class="chat-input-area">
-                <input type="text" id="chat-input" class="chat-input" placeholder="メッセージを入力..."
-                    onkeypress="if(event.key === 'Enter' && !event.isComposing) sendChat()">
-                <button id="chat-send" class="chat-send" aria-label="メッセージを送信" onclick="sendChat()"><i
-                        class="material-icons-round">send</i></button>
-            </div>
+      <section class="page reserve" id="reserve">
+        <div class="final-head">
+          <h2>まずは<br />無料体験から</h2>
+          <p>無理なく続けられる方法を、<br />一緒に見つけましょう。</p>
+          <div class="photo rounded" data-photo="15"></div>
         </div>
-
-        <div class="chat-button" id="chat-button">
-            <div class="chat-tooltip">質問あるたま？</div>
-            <img src="images/11.webp" alt="たまちゃん" class="chat-icon-img"
-                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23ff1a7d%22/><text x=%2250%22 y=%2265%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22white%22>T</text></svg>'">
+        <div class="offer">
+          <span class="offer-kicker">ここまで見てくれた方へ</span>
+          <h3>自分に合うかどうか<br />無料体験で確かめる</h3>
+          <strong><small>初回体験</small>無料</strong>
+          <a class="offer-cta" href="https://liff.line.me/2009803249-QQEbOzvg">無料体験を予約する<span>→</span></a>
+          <ul>
+            <li>LINEで希望日時を選ぶだけ</li>
+            <li>日程変更・キャンセルはLINE相談OK</li>
+            <li>無理な勧誘なし</li>
+          </ul>
         </div>
-    </div>
-    -->
-
-    <!-- ▼ URLバー収縮防止のためのスクロールラッパー ▼ -->
-    <div class="scroll-wrapper">
-    <main>
-        <section class="hero">
-            <div class="hero-img">
-                <img class="hero-slide slide-a active" src="images/大林1.webp" alt="トレーニング" id="hero-slide-a">
-                <img class="hero-slide slide-b" src="images/6.webp" alt="トレーニング" id="hero-slide-b">
-                <!-- ① 文字の読みやすさを担保する静的なモヤ -->
-                <div class="hero-static-overlay"></div>
-                <!-- ② 永遠に流れ続ける光のストリーム -->
-                <div class="hero-dynamic-overlay"></div>
-            </div>
-            <div class="hero-content">
-                <a href="https://line.me/R/ti/p/@072WKBWC" class="offer-badge" style="text-decoration: none; cursor: pointer; text-align: center;">
-                    <span style="font-size: 14px; opacity: 0.9;">＼ 毎月先着5名様限定！ ／</span><br>
-                    <span style="display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 2px;">
-                        <i class="material-icons-round" style="font-size: 18px; margin: 0;">touch_app</i>
-                        タップして無料お試しへ
-                    </span>
-                </a>
-                <h1 class="hero-title">
-                    <span style="display: inline-block;">今里町の</span><br>
-                    <span style="display: inline-block;">パーソナルジム</span>
-                    <span class="title-brand">たまフィット</span>
-                </h1>
-                <p class="hero-copy">正直、3ヶ月で素人は変わりません。<br>だからこそ、<span
-                        style="display: inline-block;">一生モノの「正しい知識」をここで。</span></p>
-                <div class="trust-badges">
-                    <div class="trust-badge"><i class="material-icons-round">people</i>
-                        <div>マンツー<br>マン</div>
-                    </div>
-                    <div class="trust-badge"><i class="material-icons-round">restaurant_menu</i>
-                        <div>PFC<br>管理</div>
-                    </div>
-                    <div class="trust-badge"><i class="material-icons-round">favorite</i>
-                        <div>リバウンド<br>防止</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="trial" class="section-block">
-            <div class="container">
-                <div class="sec-header">
-                    <span class="sec-sub">TRIAL</span>
-                    <h2 class="sec-title"><span style="display: inline-block;">LINE友だち追加で</span><br class="mobile-br"><span style="display: inline-block;">60分体験無料</span></h2>
-                    <p class="sec-desc">ジム選びで失敗しないために、<br class="mobile-br">まずは来てください。</p>
-                </div>
-                <div class="ticket-box">
-                    <h3 style="font-size: 22px; margin-bottom: 10px;">カウンセリング ＋ 体験トレーニング (60分)</h3>
-                    <p style="font-size: 14px; color: var(--text-sub); margin-bottom: 15px; line-height: 1.6;">
-                        <span style="font-weight: 700; color: var(--primary);">【お持ち物】</span><br class="mobile-br">
-                        ウェア / お飲み物 / <br class="sp-only">室内シューズ(任意)
-                    </p>
-                    <div class="ticket-price">無料<span style="font-size: 24px;"> (¥0)</span></div>
-                    <p style="font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 20px;">
-                        ※毎月先着5名様限定！お早めにお申し込みください。</p>
-                    <a href="https://line.me/R/ti/p/@072WKBWC" class="ticket-btn"><i
-                            class="material-icons-round">calendar_today</i> LINE友だち追加で体験60分無料</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="reason" class="section-block">
-            <div class="container">
-                <div class="sec-header">
-                    <span class="sec-sub">REASON</span>
-                    <h2 class="sec-title">たまフィットが選ばれる3つの理由</h2>
-                </div>
-                <div class="reason-list">
-                    <div class="reason-row reason-mint">
-                        <div class="reason-text">
-                            <i class="material-icons-round reason-icon">science</i>
-                            <h3>1. 完全オーダーメイド指導</h3>
-                            <p>体力や体調に合わせて、<span style="display: inline-block;">最も効果的で</span><span style="display: inline-block;">無理のない</span>メニューを提案します。「運動が苦手」な方こそ、プロの指導で<span style="display: inline-block;">楽しく安全に</span>変わる実感をご提供します。</p>
-                        </div>
-                        <div class="reason-img-box"><img src="images/大林4.webp" alt="指導風景" loading="lazy"></div>
-                    </div>
-                    <div class="reason-row reason-yellow">
-                        <div class="reason-text">
-                            <i class="material-icons-round reason-icon">lunch_dining</i>
-                            <h3>2. 無理のない食事サポート</h3>
-                            <p>極端な糖質制限など、一生続けられない<span style="display: inline-block;">無理な我慢は</span>させません。好きな食事も楽しみながら、<span style="display: inline-block;">最適なバランスを</span>身につける<span style="display: inline-block;">「一生モノの知識」</span>をサポートします。</p>
-                        </div>
-                        <div class="reason-img-box"><img src="images/6.webp" alt="食事指導イメージ" loading="lazy"></div>
-                    </div>
-                    <div class="reason-row reason-purple">
-                        <div class="reason-text">
-                            <i class="material-icons-round reason-icon">vpn_key</i>
-                            <h3>3. 集中できる完全貸切空間</h3>
-                            <p>大型ジム特有の<span style="display: inline-block;">順番待ちは</span>ありません。必要な設備とトレーナーを<span style="display: inline-block;">贅沢に貸切。</span>あなたのペースに合わせて、<span style="display: inline-block;">最も集中できる</span>特別な環境をお約束します。</p>
-                        </div>
-                        <div class="reason-img-box"><img src="images/設備1.webp" alt="完全個室のジム内観" loading="lazy"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="trainer" class="section-block">
-            <div class="container">
-                <div class="sec-header">
-                    <span class="sec-sub">TRAINER</span>
-                    <h2 class="sec-title">トレーナー紹介</h2>
-                    <p class="sec-desc">経験豊富なトレーナーが、あなたの「変わりたい」に寄り添います。</p>
-                </div>
-                <div class="trainer-grid">
-                    <div class="trainer-card card-obayashi">
-                        <div class="trainer-img-box"><img src="images/12.webp" alt="大林トレーナー" loading="lazy">
-                        </div>
-                        <div class="trainer-info">
-                            <h3 class="trainer-name">大林トレーナー</h3>
-                            <span class="trainer-tag tag-obayashi">運動初心者・中高年の方歓迎</span>
-                            <p class="trainer-msg">
-                                不安な方にこそ、寄り添ってご案内します！体力や年齢、柔軟性を考慮し、段階的にメニューを調整。「楽しく続けられる」セッションを何より大切にしています。</p>
-                        </div>
-                    </div>
-                    <div class="trainer-card card-tamai">
-                        <div class="trainer-img-box"><img src="images/13.webp" alt="玉井トレーナー" loading="lazy"></div>
-                        <div class="trainer-info">
-                            <h3 class="trainer-name">玉井トレーナー</h3>
-                            <span class="trainer-tag tag-tamai">ボディメイク・大会指導可能</span>
-                            <p class="trainer-msg">初心者の方のダイエットから、コンテスト向けの本格指導まで。ボディメイクのプロとして、様々なご希望に応じて全力でサポートいたします！</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="section-block">
-            <div class="container">
-                <div class="sec-header">
-                    <span class="sec-sub">GALLERY</span>
-                    <h2 class="sec-title">施設・セッション風景</h2>
-                    <p class="sec-desc">楽しく、無理なく、綺麗な空間で。あなたのペースに合わせます。</p>
-                </div>
-            </div>
-
-            <div class="gallery-wrapper">
-                <div class="gallery-hint"><i class="material-icons-round" style="font-size:16px;">swipe</i>
-                    横にスワイプしてご覧ください</div>
-
-                <div class="gallery-scroll" id="drag-slider">
-                    <!-- ギャラリー画像は JavaScript で動的に読み込まれます -->
-                </div>
-            </div>
-        </section>
-
-        <section id="price" class="section-block">
-            <div class="container">
-                <div class="sec-header">
-                    <span class="sec-sub">PRICE</span>
-                    <div class="nyuukakin-badge" style="margin-bottom: 20px;">✓ 今だけ入会金無料</div>
-                    <h2 class="sec-title">料金表（回数制）</h2>
-                    <p class="price-concept-line1">通う程お得な料金システム！</p>
-                    <p class="price-concept-line2">頻度に応じ価格が変わる</p>
-                </div>
-
-                <div class="price-table-wrapper">
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th class="col-course">コース</th>
-                                <th class="col-60">60分<br><span class="per-session-badge">1回あたり</span></th>
-                                <th class="col-30">30分<br><span class="per-session-badge">1回あたり</span></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- 月4回コース -->
-                            <tr class="recommend-row">
-                                <td class="course-name">
-                                    <span class="recommend-badge">人気No.1</span><br>
-                                    月4回コース
-                                    <button class="total-toggle-btn" onclick="toggleTotal(this)">▼ 合計額を見る</button>
-                                </td>
-                                <td class="price-val highlight">
-                                    7,700<span class="yen">円</span>
-                                    <div class="strike-price">通常 <s>9,900円</s></div>
-                                </td>
-                                <td class="price-val">
-                                    4,400<span class="yen">円</span>
-                                    <div class="strike-price">通常 <s>5,500円</s></div>
-                                </td>
-                            </tr>
-                            <tr class="total-row">
-                                <td class="total-label">月4回 総額</td>
-                                <td class="total-val">
-                                    30,800<span class="yen">円</span>
-                                    <div class="total-compare"><s class="total-strike">通常 39,600円</s></div>
-                                </td>
-                                <td class="total-val">
-                                    17,600<span class="yen">円</span>
-                                    <div class="total-compare"><s class="total-strike">通常 22,000円</s></div>
-                                </td>
-                            </tr>
-                            <!-- 月8回コース -->
-                            <tr>
-                                <td class="course-name">
-                                    <span class="best-value-tag">★ 最もお得</span><br>
-                                    月8回コース
-                                    <button class="total-toggle-btn" onclick="toggleTotal(this)">▼ 合計額を見る</button>
-                                </td>
-                                <td class="price-val">
-                                    6,600<span class="yen">円</span>
-                                    <div class="strike-price">通常 <s>9,900円</s></div>
-                                </td>
-                                <td class="price-val">
-                                    3,850<span class="yen">円</span>
-                                    <div class="strike-price">通常 <s>5,500円</s></div>
-                                </td>
-                            </tr>
-                            <tr class="total-row">
-                                <td class="total-label">月8回 総額</td>
-                                <td class="total-val">
-                                    52,800<span class="yen">円</span>
-                                    <div class="total-compare"><s class="total-strike">通常 79,200円</s></div>
-                                </td>
-                                <td class="total-val">
-                                    30,800<span class="yen">円</span>
-                                    <div class="total-compare"><s class="total-strike">通常 44,000円</s></div>
-                                </td>
-                            </tr>
-                            <!-- 月2回コース -->
-                            <tr>
-                                <td class="course-name">
-                                    月2回コース
-                                    <button class="total-toggle-btn" onclick="toggleTotal(this)">▼ 合計額を見る</button>
-                                </td>
-                                <td class="price-val">
-                                    8,800<span class="yen">円</span>
-                                    <div class="strike-price">通常 <s>9,900円</s></div>
-                                </td>
-                                <td class="price-val">
-                                    4,950<span class="yen">円</span>
-                                    <div class="strike-price">通常 <s>5,500円</s></div>
-                                </td>
-                            </tr>
-                            <tr class="total-row">
-                                <td class="total-label">月2回 総額</td>
-                                <td class="total-val">
-                                    17,600<span class="yen">円</span>
-                                    <div class="total-compare"><s class="total-strike">通常 19,800円</s></div>
-                                </td>
-                                <td class="total-val">
-                                    9,900<span class="yen">円</span>
-                                    <div class="total-compare"><s class="total-strike">通常 11,000円</s></div>
-                                </td>
-                            </tr>
-                            <!-- 通常料金（都度払い） -->
-                            <tr>
-                                <td class="course-name">
-                                    通常料金<br>
-                                    <span style="font-size:12px; color:var(--text-sub); font-weight:normal;">都度払い</span>
-                                </td>
-                                <td class="price-val">9,900<span class="yen">円</span></td>
-                                <td class="price-val">5,500<span class="yen">円</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="price-note">
-                        ※料金はすべて税込です。通常料金以外は各コースのセット回数券でのご購入となります。<br>
-                        ※例：「月4回コース」の60分の場合、7,700円×4回分 ＝ 30,800円(税込) のお支払いとなります。
-                    </p>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="reserve" class="section-block">
-            <div class="container">
-                <div class="sec-header">
-                    <span class="sec-sub">RESERVE</span>
-                    <h2 class="sec-title">ご予約の流れ</h2>
-                    <p class="sec-desc"><span style="display:inline-block;">LINEで簡単に体験予約！</span><span style="display:inline-block;">面倒な手続きはありません。</span></p>
-                </div>
-
-                <div class="step-wrap">
-                    <div class="step-box">
-                        <div class="step-num">1</div>
-                        <i class="material-icons-round">person_add</i>
-                        <h3>LINE登録</h3>
-                        <p style="font-size:14px; color:var(--text-sub); margin-top:10px;">
-                            下のボタンから公式LINEを<br>友だち追加してください。</p>
-                    </div>
-                    <div class="step-box">
-                        <div class="step-num">2</div>
-                        <i class="material-icons-round">event_available</i>
-                        <h3>カレンダーで体験予約</h3>
-                        <p style="font-size:14px; color:var(--text-sub); margin-top:10px;">
-                            公式LINE内のカレンダーから<br>希望日時を選択して予約。</p>
-                    </div>
-                    <div class="step-box">
-                        <div class="step-num">3</div>
-                        <i class="material-icons-round">directions_run</i>
-                        <h3>ご来店・体験</h3>
-                        <p style="font-size:14px; color:var(--text-sub); margin-top:10px;">
-                            動きやすい格好、水分などを<br>ご持参の上お越しください。</p>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="https://line.me/R/ti/p/@072WKBWC" class="ticket-btn" style="display:inline-block;"><i
-                            class="material-icons-round">calendar_today</i> LINE友だち追加で体験60分無料</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="section-block">
-            <div class="container">
-                <div class="sec-header">
-                    <span class="sec-sub">Q & A</span>
-                    <h2 class="sec-title">よくあるご質問</h2>
-                    <p class="sec-desc">お客様からよくいただくご質問にお答えします。</p>
-                </div>
-
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <div class="faq-q">
-                            <div class="faq-q-left"><span class="faq-q-icon">Q</span> 運動初心者でも大丈夫ですか？</div>
-                            <i class="material-icons-round toggle-icon">expand_more</i>
-                        </div>
-                        <div class="faq-a">
-                            <p>もちろん大丈夫です！フォームの基礎から丁寧にサポートしますので、「運動が苦手」「ジム経験ゼロ」の方でも安心して始められます。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">
-                            <div class="faq-q-left"><span class="faq-q-icon">Q</span> 完全マンツーマンですか？</div>
-                            <i class="material-icons-round toggle-icon">expand_more</i>
-                        </div>
-                        <div class="faq-a">
-                            <p>はい、完全マンツーマン指導です。希望に応じ2名様まででしたら友達や友人の方と一緒にペアでセッションを受けることもできます。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">
-                            <div class="faq-q-left"><span class="faq-q-icon">Q</span> 40代でも効果は期待できますか？</div>
-                            <i class="material-icons-round toggle-icon">expand_more</i>
-                        </div>
-                        <div class="faq-a">
-                            <p>むしろ40代～60代の方をメインターゲットとしているので、年齢関係なく続けられて変化を実感しやすい環境をご用意しています。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">
-                            <div class="faq-q-left"><span class="faq-q-icon">Q</span> 相談だけでもできますか</div>
-                            <i class="material-icons-round toggle-icon">expand_more</i>
-                        </div>
-                        <div class="faq-a">
-                            <p>もちろんOKです！公式LINEからご質問だけでもお気軽にご連絡ください。無理な営業は一切いたしません。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">
-                            <div class="faq-q-left"><span class="faq-q-icon">Q</span> トレーニングはキツいですか？</div>
-                            <i class="material-icons-round toggle-icon">expand_more</i>
-                        </div>
-                        <div class="faq-a">
-                            <p>必要以上に追い込むことはありません。楽しく続けられる強度を大切にしていますので、「続けられない」という心配なく通えます。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">
-                            <div class="faq-q-left"><span class="faq-q-icon">Q</span> 続けられる自信がありません。</div>
-                            <i class="material-icons-round toggle-icon">expand_more</i>
-                        </div>
-                        <div class="faq-a">
-                            <p>「運動が続けられること」を前提に作ったジムです。あなたの体力や生活リズムに合わせて段階的に強度を調整します。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">
-                            <div class="faq-q-left"><span class="faq-q-icon">Q</span> パーソナルジムは高そう</div>
-                            <i class="material-icons-round toggle-icon">expand_more</i>
-                        </div>
-                        <div class="faq-a">
-                            <p>チケット制なので、「気づいたら毎月引き落とされていた…」という心配はありません。もちろん入会金や手数料も不要です。</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">
-                            <div class="faq-q-left"><span class="faq-q-icon">Q</span> 本当に痩せられますか？</div>
-                            <i class="material-icons-round toggle-icon">expand_more</i>
-                        </div>
-                        <div class="faq-a">
-                            <p>無責任に「絶対痩せます」とは言いません。でも、あなたが続けられて変化を実感できる方法を全力で提案します。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="access" class="section-block">
-            <div class="container">
-                <div class="sec-header">
-                    <span class="sec-sub">ACCESS</span>
-                    <h2 class="sec-title">店舗・アクセス</h2>
-                </div>
-                <div class="access-info">
-                    <div style="flex: 1; display: flex; flex-direction: column;">
-                        <p style="font-size: 16px; margin-bottom: 20px;">
-                            <i class="material-icons-round" style="color:var(--accent-mint);">location_on</i>
-                            <strong>所在地:</strong><br>〒760-0078<br>香川県高松市今里町393-1 前川ビル1F
-                        </p>
-                        <div class="parking-box">
-                            <strong><i class="material-icons-round">directions_car</i> 店舗前に専用駐車場 2台完備</strong>
-                            <div class="parking-img-placeholder">
-                                <img src="images/10.webp" alt="駐車場" onerror="this.parentNode.style.display='none'"
-                                     onclick="document.getElementById('image-modal').style.display='flex'; document.getElementById('modal-img').src=this.src;" style="cursor:zoom-in;">
-                            </div>
-                            <p style="margin-bottom: 25px;">
-                                店舗のすぐ前に駐車スペースをご用意しております。<br>
-                                <span style="font-size: 13px; color: var(--text-sub);">※初めてのご来店などで駐車にご不安がある方は、スタッフが誘導サポートをいたします。ぜひお気軽にお声がけください。</span>
-                            </p>
-                            <strong><i class="material-icons-round">directions_bus</i> バスのアクセスも抜群</strong>
-                            <p style="margin: 0; line-height: 1.6;">「琴電レインボー循環バス」のバス停が目の前にあります。</p>
-                        </div>
-                        <p style="font-size: 16px;">
-                            <i class="material-icons-round" style="color:var(--accent-mint);">access_time</i>
-                            <strong>営業時間:</strong> 10:00 - 22:00（予約制）
-                        </p>
-                        <a href="https://maps.google.com/maps?q=香川県高松市今里町393-1" target="_blank"
-                            rel="noopener noreferrer"
-                            style="display: block; background: var(--accent-mint); color: #fff; text-align: center; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 900; margin-top: auto; box-shadow: 0 5px 15px rgba(0,184,169,0.3);">
-                            <i class="material-icons-round">map</i> Googleマップアプリで開く
-                        </a>
-                    </div>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3295.0370753653697!2d134.05208677572824!3d34.32407517305588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3553eb273336cf85%3A0xa574e0b4a725589c!2z44Gf44G-44OV44Kj44OD44OI!5e0!3m2!1sja!2sjp!4v1775555593301!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="safe">
+          <h3>当日の持ち物</h3>
+          <ul>
+            <li>動きやすい服装</li>
+            <li>飲み物</li>
+            <li>室内シューズ<br />（なくてもOK）</li>
+            <li>タオル</li>
+            <li>初回はカウンセリング後、体力や不安に合わせて体験トレーニングを行います。</li>
+          </ul>
+          <div class="photo portrait" data-photo="16"></div>
+        </div>
+        <div class="reserve-steps">
+          <b>予約方法</b><span>1. LINE友だち追加</span><span>2. カレンダーから日時選択</span><span>3. ご来店</span>
+        </div>
+        <footer>たまフィット ｜ 香川県高松市今里町393-1 前川ビル1F</footer>
+      </section>
     </main>
-
-    <footer style="text-align: center; padding: 60px 0 140px 0; background: rgba(255, 255, 255, 0.7); -webkit-backdrop-filter: blur(20px) saturate(120%); backdrop-filter: blur(20px) saturate(120%); border-top: 1px solid rgba(255, 255, 255, 0.9); margin-top: 40px;">
-        <div class="container">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px;">
-                <img src="images/9.webp" alt="たまフィット ロゴ" style="height: 38px; width: auto; object-fit: contain;">
-                <div style="font-weight: 900; color: var(--text-main); font-size: 22px;">たまフィット</div>
-            </div>
-            <p style="color: var(--text-sub); font-size: 13px; font-weight: 700; letter-spacing: 0.05em;">© 2026 TamaFit | 人生を変える 寄り添いの場所</p>
-        </div>
-    </footer>
-    </div> <!-- /scroll-wrapper -->
-
-    <!-- モーダル（画像拡大表示用） -->
-    <div id="image-modal" class="image-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); align-items:center; justify-content:center; cursor:pointer;" onclick="this.style.display='none'">
-        <span style="position:absolute; top:20px; right:30px; color:#fff; font-size:40px; font-weight:bold;">&times;</span>
-        <img id="modal-img" style="max-width:90%; max-height:90%; width:auto; height:auto; object-fit:contain; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
     </div>
-
-    <!-- <script src="tamachan-data.js"></script> -->
-
-    <script src="main.js"></script>
+    <div class="sticky-cta" aria-label="予約・相談メニュー">
+      <a class="sticky-cta__button sticky-cta__button--line" href="https://lin.ee/rZYFPHl">
+        <span class="sticky-cta__line-mark">LINE</span>
+        <span>LINE相談</span>
+      </a>
+      <a class="sticky-cta__button sticky-cta__button--reserve" href="https://liff.line.me/2009803249-QQEbOzvg">
+        <span>無料体験予約</span>
+        <span class="sticky-cta__arrow">→</span>
+      </a>
+    </div>
     <script>
-        // 超軽量：2枚の画像タグ（皿回し方式）で15枚の画像をクロスフェードする
-        document.addEventListener('DOMContentLoaded', () => {
-            const images = [
-                "images/大林1.webp", "images/6.webp", "images/14.webp", "images/玉井1.webp",
-                "images/15.webp", "images/大林2.webp", "images/16.webp", "images/玉井2.webp",
-                "images/17.webp", "images/大林3.webp", "images/18.webp", "images/玉井3.webp",
-                "images/大林4.webp", "images/20.webp", "images/玉井4.webp"
-            ];
-            const slideA = document.getElementById('hero-slide-a');
-            const slideB = document.getElementById('hero-slide-b');
-            let currentIndex = 0;
-            let showA = true;
-
-            setInterval(() => {
-                if (showA) {
-                    slideA.classList.remove('active');
-                    slideB.classList.add('active');
-                    // フェードアウト後(0.8秒)に、次の次の画像を裏でロードしておく
-                    setTimeout(() => {
-                        let prepIndex = (currentIndex + 2) % images.length;
-                        slideA.src = images[prepIndex];
-                    }, 800);
-                } else {
-                    slideB.classList.remove('active');
-                    slideA.classList.add('active');
-                    setTimeout(() => {
-                        let prepIndex = (currentIndex + 2) % images.length;
-                        slideB.src = images[prepIndex];
-                    }, 800);
-                }
-                currentIndex = (currentIndex + 1) % images.length;
-                showA = !showA;
-            }, 2500); 
-        });
+      (() => {
+        const stickyCta = document.querySelector(".sticky-cta");
+        const updateStickyCta = () => {
+          stickyCta.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.75);
+        };
+        window.addEventListener("scroll", updateStickyCta, { passive: true });
+        updateStickyCta();
+      })();
     </script>
-</body>
-
+  </body>
 </html>
